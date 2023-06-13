@@ -1,16 +1,14 @@
 
-let table = document.querySelector('.table1');
-
-let table1 = [
+let jackets = [
   {
     id: '1',
     image: '',
-    name: 'Biker jacket',
+    name: '',
     price: 'R250'
   },
   {
     id: '2',
-    image: '../images/Kiddies-J (girls)/kids_Biker_Jacket-removebg-preview (8).png',
+    image: 'https://i.postimg.cc/xTM04FZg/kids-Biker-Jacket-removebg-preview-8.png',
     name: 'Denim jacket',
     price: 'R200'
   },
@@ -28,23 +26,90 @@ let table1 = [
   },
   {
     id: '5',
-    image: '../images/Kiddies-J (girls)/teddy_jacket-removebg-preview.png',
+    image: 'https://i.postimg.cc/NFNPJYcL/teddy-jacket-removebg-preview.png',
     name: 'Teddy jacket',
     price: 'R250'
   }
 ];
 
-table1.forEach(item => {
-  table.innerHTML += `
+
+
+
+
+
+
+
+
+
+localStorage.setItem('jackets', JSON.stringify(jackets));
+
+function displayData() {
+  let jackets
+
+  if(localStorage.getItem('jackets') == null) {
+    jackets = [];
+  }else {
+    jackets = JSON.parse(localStorage.getItem('jackets'))
+  }
+
+  console.log(jackets);
+
+  let tableData = document.querySelector('#tableData');
+
+  tableData.innerHTML = '';
+  jackets.forEach((item) => {
+    tableData.innerHTML += `
     <tr>
-      <td>${item.image}</td>
-      <td>${item.name}</td>
-      <td>${item.price}</td>
-      <td><button>Adit</button></td>
-      <td><button>Delete</button></td>
+    <td><img src="${item.image}"></td>
+    <td>${item.name}</td>
+    <td>${item.price}</td>
     </tr>
-  `;
-});
+    `
+  })
+}
+
+document.onload = displayData();
+
+function addItem() {
+let name = document.querySelector('#name').value;
+let price = document.querySelector('#price').value;
+let image = document.querySelector('#image').value;
+// console.log('reached');
+let jackets
+
+if(localStorage.getItem('jackets') == null) {
+  jackets = [];
+}else {
+  jackets = JSON.parse(localStorage.getItem('jackets'))
+}
+
+console.log(jackets);
+
+jackets.push({
+  name: name,
+  price: price,
+  image: image
+})
+
+localStorage.setItem('jackets', JSON.stringify(jackets));
+displayData();
+
+name = document.querySelector('#name').value = '';
+price = document.querySelector('#price').value = '';
+image = document.querySelector('#image').value = '';
+}
 
 
 
+function sortItem() {
+  let name = document.querySelector('#name').value = '';
+  price = document.querySelector('#price').value = '';
+  image = document.querySelector('#image').value = '';
+}
+
+
+if(localStorage.getItem('jacket')== null) {
+  jacket =[]
+}else {
+  jacket = JSON.parse(localStorage.getItem('jacket'))
+}
