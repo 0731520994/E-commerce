@@ -1,50 +1,49 @@
+let products = 
+    JSON.parse(localStorage.getItem("products"))
 
-let table = document.querySelector('.table1');
+    JSON.parse(localStorage.getItem("products")).length ?
+    JSON.parse(localStorage.setItem("products")) :
 
-let table1 = [
-  {
-    id: '1',
-    image: '',
-    name: 'Biker jacket',
-    price: 'R250'
-  },
-  {
-    id: '2',
-    image: '../images/Kiddies-J (girls)/kids_Biker_Jacket-removebg-preview (8).png',
-    name: 'Denim jacket',
-    price: 'R200'
-  },
-  {
-    id: '3',
-    image: '../images/Kiddies-J (girls)/kids_micky_demin-removebg-preview.png',
-    name: 'Micky denim',
-    price: 'R250'
-  },
-  {
-    id: '4',
-    image: '../images/Kiddies-J (girls)/Puffer-Jacket-removebg-preview (1).png',
-    name: 'Puffer jacket',
-    price: 'R220'
-  },
-  {
-    id: '5',
-    image: '../images/Kiddies-J (girls)/teddy_jacket-removebg-preview.png',
-    name: 'Teddy jacket',
-    price: 'R250'
-  }
-];
+    JSON.stringify([
+        {
+                id: 1
 
-table1.forEach(item => {
-  table.innerHTML += `
-    <tr>
-      <td>${item.image}</td>
-      <td>${item.name}</td>
-      <td>${item.price}</td>
-      <td><button>Adit</button></td>
-      <td><button>Delete</button></td>
-    </tr>
-  `;
-});
+        }
+    ])
+
+    document.querySelector("section#productlist.row:last-child")
+    products.array.forEach(product => {
+        productlist.innerHTML = " "
+    });
+
+    let products = JSON.parse(localStorage.getItem('products'))
+
+    let data row = #data_row
+
+    product.forEach(product => data row.innerHTML +=
+        tr`
+        `)
 
 
+    sort.addEventListener ('click', (e) =>{
+        Event.preventDefault(),
+        table = table.sort ((a,b)) =>{
 
+            if a.name< b.name){
+                return -1,
+            }else{
+                return 1, 
+
+                return onabort, 
+                renderlist()
+            }
+    })
+
+
+    let table deleteButton
+
+    function deleteButton(){
+
+  
+
+    }
