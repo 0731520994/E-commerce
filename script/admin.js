@@ -1,5 +1,3 @@
-let products = 
-    JSON.parse(localStorage.getItem("products"))
 
     JSON.parse(localStorage.getItem("products")).length ?
     JSON.parse(localStorage.setItem("products")) :
