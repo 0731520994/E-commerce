@@ -13,7 +13,7 @@ let products = [
     },
     {
       id: '3',
-      image: '',
+      image: 'https://i.postimg.cc/Y08WRSVB/barbie-girls-barbie-fleece-removebg-preview-2.png',
       name: '💓Barbie fleece Jacket',
       price: 'R250'
     },

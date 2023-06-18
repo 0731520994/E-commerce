@@ -9,6 +9,8 @@
   transition: ease-in-out;
 }
 
+.navbar-nav
+
 .ul li a:hover{
   color: hotpink
 }
