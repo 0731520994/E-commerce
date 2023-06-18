@@ -1,6 +1,6 @@
-let girlsJackets = JSON.parse(localStorage.getItem('girlsJackets')) || [];
-if (girlsJackets.length === 0) {
-  girlsJackets = [
+let products = JSON.parse(localStorage.getItem('jackets')) ?
+JSON.parse(localStorage.getItem('jackets')) : 
+ localStorage.setItem('jackets', JSON.stringify(
     {
       id: '1',
       image: 'https://i.postimg.cc/DZg7PCkC/barbie-girls-barbie-fleece.jpg',
@@ -30,14 +30,7 @@ if (girlsJackets.length === 0) {
       image: 'https://i.postimg.cc/NFNPJYcL/teddy-jacket-removebg-preview.png',
       name: 'Teddy jacket',
       price: 'R250'
-    }
-  ];
-  localStorage.setItem('girlsJackets', JSON.stringify(girlsJackets));
-}
-
-let boysJackets = JSON.parse(localStorage.getItem('boysJackets')) || [];
-if (boysJackets.length === 0) {
-  boysJackets = [
+    },
     {
       id: '6',
       image: '',
@@ -68,15 +61,9 @@ if (boysJackets.length === 0) {
       name: 'Teddy jacket',
       price: 'R250'
     }
-  ];
-  localStorage.setItem('boysJackets', JSON.stringify(boysJackets));
-}
-
-let productsContainer = document.querySelector('.jackets-item');
-
-try {
-  // Display girls' jackets
-  girlsJackets.forEach(item => {
+    let productsContainer = document.querySelector('.jackets-item');
+  try{
+  products.forEach(item => {
     productsContainer.innerHTML += `
       <div class="col">
         <div class="card" style="width: 18rem;">
@@ -85,43 +72,21 @@ try {
             <h5 class="card-title">${item.name}</h5>
             <p class="card-text">${item.price}</p>
             <select class="iphone">
-              <option>select size</option>
-              <option value="size">3-4yrs</option>
-              <option value="size">5-6yrz</option>
-              <option value="size">7-8yrs</option>
-              <option value="size">S</option>
-              <option value="size">M</option>
-              <option value="size">L</option>
+              <option>select color</option>
+              <option value="color">black</option>
+              <option value="color">white</option>
+              <option value="color">Gold</option>
+              <option value="color">pink</option>
             </select>
-            <a href="./products.js" class="btn btn-primary hotpink-link">Add to cart</a>
+            <a href="./checkout..js" class="btn btn-primary">Add to cart</a>
           </div>
         </div>
       </div>
     `;
   });
-
-  // Display boys' jackets
-  boysJackets.forEach(item => {
-    productsContainer.innerHTML += `
-      <div class="col">
-        <div class="card" style="width: 18rem;">
-          <img src="${item.image}" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">${item.name}</h5>
-            <p class="card-text">${item.price}</p>
-            <select class="iphone">
-              <option>select size</option>
-              <option value="size">3-4yrs</option>
-              <option value="size">5-6yrz</option>
-              <option value="size">7-8yrs</option>
-              <option value="size">S</option>
-              <option value="size">M</option>
-              <option value="size">L</option>
-            </select>
-            <a href="./products.js" class="btn btn-primary">Add to cart</a>
-          </div>
-        </div>
-      </div>
+}catch(e) {
+  location.reload()
+}
     `;
   });
 } catch(e) {

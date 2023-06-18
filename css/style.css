@@ -1,8 +1,17 @@
 
+
 .custom-navbar {
     background-color: lightpink;
   }
 
+.ul li a {
+  text-decoration: none;
+  transition: ease-in-out;
+}
+
+.ul li a:hover{
+  color: hotpink
+}
 
 
 .img {
@@ -47,10 +56,6 @@
     background-color: hotpink;
   }
   
-  .image-size {
-    width: 100%;
-    height: 100px; 
-  }
 
   .card {
    
@@ -78,10 +83,6 @@
   }
 
 
-  a{
-    background-color: hotpink;
-    color: hotpink
-  }
 
   h2{
    font-style: italic;
@@ -139,9 +140,29 @@
 
     }
 
-    .par{
-      position:relative;
-      bottom: 140px;
-      left: 260px
+    .front,
+    .text-overlay {
+      position:absolute;
+      top: 23rem;
+      left: 30rem;
+      color: rgb(42, 41, 41);
+      font-weight: bold;
+      text-shadow: 16px 2px 6px hotpink;
+      font-family:Gloria Hallelujah;
+      
+  
     }
-   
+    
+    
+    .button.btn-primary {
+      position: absolute;
+      top: 20%;
+      left: 23%;
+
+    }
+
+    .footer{
+      background-color: hotpink;
+      text-align: center;
+      justify-content: center;
+    }
