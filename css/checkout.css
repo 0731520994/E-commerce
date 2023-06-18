@@ -1,0 +1,18 @@
+
+
+h1{
+    text-align: center;
+    justify-content: center;
+    font-size:xxx-large;
+    text-align: center;
+    text-decoration: underline hotpink;
+    text-shadow: 3px 6px 12px rgba(0, 0, 0, 0.5);
+    padding: 4rem;
+  }
+  
+.footer{
+    background-color: hotpink;
+    text-align: center;
+    justify-content: center;
+    
+  }

@@ -1,6 +1,11 @@
+
+
+
 let products = JSON.parse(localStorage.getItem('jackets')) ?
 JSON.parse(localStorage.getItem('jackets')) : 
  localStorage.setItem('jackets', JSON.stringify(
+  [ 
+
     {
       id: '1',
       image: 'https://i.postimg.cc/DZg7PCkC/barbie-girls-barbie-fleece.jpg',
@@ -61,7 +66,12 @@ JSON.parse(localStorage.getItem('jackets')) :
       name: 'Teddy jacket',
       price: 'R250'
     }
-    let productsContainer = document.querySelector('.jackets-item');
+  ]
+ ))
+
+
+    
+  let productsContainer = document.querySelector('.jackets-item');
   try{
   products.forEach(item => {
     productsContainer.innerHTML += `
@@ -78,7 +88,7 @@ JSON.parse(localStorage.getItem('jackets')) :
               <option value="color">Gold</option>
               <option value="color">pink</option>
             </select>
-            <a href="./checkout..js" class="btn btn-primary">Add to cart</a>
+            <a href="./checkout.html" class="btn btn-primary">Add to cart</a>
           </div>
         </div>
       </div>
@@ -86,10 +96,5 @@ JSON.parse(localStorage.getItem('jackets')) :
   });
 }catch(e) {
   location.reload()
-}
-    `;
-  });
-} catch(e) {
-  location.reload();
 }
 
