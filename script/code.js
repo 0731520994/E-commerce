@@ -2,32 +2,32 @@ let products = [
     {
       id: '1',
       image: 'https://i.postimg.cc/c46dfMDm/kids-Biker-Jacket-removebg-preview-8-edited.jpg',
-      name: 'Biker jacket',
+      name: '💓Biker jacket',
       price: 'R250'
     },
     {
       id: '2',
       image: 'https://i.postimg.cc/fbs4qxv1/Mickey-Mouse-Bomber.jpg',
-      name: 'Micky Mouse Bomber Jacket',
-      price: 'R220'
+      name: '💙Micky Mouse Bomber Jacket',
+      price: 'R350'
     },
     {
       id: '3',
-      image: 'https://i.postimg.cc/5yzBwyTV/barbie-girls-barbie-fleece.jpg',
-      name: 'Barbie fleece Jacket',
+      image: 'https://i.postimg.cc/Y08WRSVB/barbie-girls-barbie-fleece-removebg-preview-2.png',
+      name: '💓Barbie fleece Jacket',
       price: 'R250'
     },
     {
       id: '4',
       image: 'https://i.postimg.cc/SQtFGrbw/Borg-collar-flap-Detail-coat.jpg',
-      name: 'Bprg collar flap',
+      name: '💙Borg collar flap',
       price: 'R350'
     },
     {
       id: '5',
       image: 'https://i.postimg.cc/Y9qZ64nr/Puffer-Jacket.jpg',
-      name: 'Puffer Jacket',
-      price: 'R800'
+      name: '💓Puffer Jacket',
+      price: 'R220'
     }
   ];
 
@@ -45,14 +45,17 @@ let products = [
             <h5 class="card-title">${item.name}</h5>
             <p class="card-text">${item.price}</p>
             <select class="jacket">
-              <option>select color</option>
-              <option value="color">black</option>
-              <option value="color">white</option>
-              <option value="color">Navy</option>
-              <option value="color">pink</option>
+              <option>select size </option>
+              <option value="size">2-3yrs</option>
+              <option value="size">3-4yrs</option>
+              <option value="size">4-5yrs</option>
+              <option value="size">5-6yrs</option>
+              <option value="size">7-8yrs</option>
+              <option value="size">S</option>
+              <option value="size">M</option>
+              <option value="size">L</option>
             </select>
-            <a href="./products.js" class="btn btn-primary style="color: hotpink">Add to cart</a>
-        
+            <a href="./html/products.html" class="btn btn-primary">See more ...</a>
           </div>
         </div>
       </div>
