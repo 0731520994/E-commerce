@@ -9,7 +9,7 @@ let products = [
       id: '2',
       image: 'https://i.postimg.cc/fbs4qxv1/Mickey-Mouse-Bomber.jpg',
       name: '💙Micky Mouse Bomber Jacket',
-      price: 'R220'
+      price: 'R350'
     },
     {
       id: '3',

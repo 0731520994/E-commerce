@@ -1,95 +1,88 @@
-
 let jackets = [
     {
       id: '1',
-      image: 'Babie jacket',
-      name: '',
+      image: 'https://i.postimg.cc/cJPFQT69/barbie-girls-barbie-fleece-removebg-preview-2-4.png',
+      name: '💓Babie jacket',
       price: 'R250'
     },
     {
       id: '2',
-      image: 'https://i.postimg.cc/xTM04FZg/kids-Biker-Jacket-removebg-preview-8.png',
-      name: 'Denim jacket',
-      price: 'R200'
-    },
-    {
-      id: '3',
-      image: '../images/Kiddies-J (girls)/kids_micky_demin-removebg-preview.png',
-      name: 'Micky denim',
+      image: 'https://i.postimg.cc/QtdhL8jK/kids-Biker-Jacket-removebg-preview-8-edited.jpg',
+      name: '💓Biker jacket',
       price: 'R250'
     },
     {
+      id: '3',
+      image: 'https://i.postimg.cc/3N2LnGzX/kids-micky-demin-1.jpg',
+      name: '💓Mickey Denim',
+      price: 'R230'
+    },
+    {
       id: '4',
-      image: '../images/Kiddies-J (girls)/Puffer-Jacket-removebg-preview (1).png',
-      name: 'Puffer jacket',
+      image: 'https://i.postimg.cc/V6Gnqk7Y/Puffer-Jacket-3.jpg',
+      name: '💓Puffer jacket',
       price: 'R220'
     },
     {
       id: '5',
-      image: 'https://i.postimg.cc/NFNPJYcL/teddy-jacket-removebg-preview.png',
-      name: '',
+      image: 'https://i.postimg.cc/L4L72qsd/Black-denim.jpg',
+      name: '💓Black Denim',
       price: 'R250'
     },
     {
-      id: '5',
-      image: 'https://i.postimg.cc/NFNPJYcL/teddy-jacket-removebg-preview.png',
-      name: 'Teddy jacket',
-      price: 'R250'
-    },
+        id: '6',
+        image: '',
+        name: '💓Teddy jacket',
+        price: 'R250'
+      },
     {
-      id: '5',
-      image: 'https://i.postimg.cc/NFNPJYcL/teddy-jacket-removebg-preview.png',
-      name: 'Teddy jacket',
-      price: 'R250'
-    },
+        id: '7',
+        image: 'https://i.postimg.cc/brK5TCK6/Borg-collar-flap-Detail-coat.jpg',
+        name: '💙Borg Collar Flap Detail coat',
+        price: 'R350'
+      },
     {
-      id: '5',
-      image: 'https://i.postimg.cc/NFNPJYcL/teddy-jacket-removebg-preview.png',
-      name: 'Teddy jacket',
-      price: 'R250'
-    },
+        id: '8',
+        image: 'https://i.postimg.cc/tTPnJDh3/Superman-quilted-jacket.jpg',
+        name: '💙Superman quilted jacket',
+        price: 'R250'
+      },
     {
-      id: '5',
-      image: 'https://i.postimg.cc/NFNPJYcL/teddy-jacket-removebg-preview.png',
-      name: 'Teddy jacket',
-      price: 'R250'
-    },
+        id: '9',
+        image: 'https://i.postimg.cc/Gm2BGbFh/Mickey-Mouse-Bomber.jpg',
+        name: '💙Mickey Mouse Bomber jacket',
+        price: 'R350'
+      },
     {
-      id: '5',
-      image: 'https://i.postimg.cc/NFNPJYcL/teddy-jacket-removebg-preview.png',
-      name: 'Teddy jacket',
-      price: 'R250'
-    },
+        id: '10',
+        image: 'https://i.postimg.cc/gj2wspCD/Bomber-jacket.jpg',
+        name: '💙Bomber Jacket',
+        price: 'R250'
+      },
     {
-      id: '5',
-      image: 'https://i.postimg.cc/NFNPJYcL/teddy-jacket-removebg-preview.png',
-      name: 'Teddy jacket',
-      price: 'R250'
-    },
+        id: '11',
+        image: 'https://i.postimg.cc/C5chxf6C/Axel-Arigato-Illusion-varsity-jacket.jpg',
+        name: '💙Allex Arigato Illuson Varsity Jacket',
+        price: 'R250'
+      },
     {
-      id: '5',
-      image: 'https://i.postimg.cc/NFNPJYcL/teddy-jacket-removebg-preview.png',
-      name: 'Teddy jacket',
-      price: 'R250'
-    },
-
-    
-
+        id: '12',
+        image: '',
+        name: '💙Denim jacket',
+        price: 'R200'
+      },
   ];
-  
-  
-  
-  
   
   localStorage.setItem('jackets', JSON.stringify(jackets));
   
   function displayData() {
-    let jackets
+    let storedJackets = localStorage.getItem('jackets');
+    let jackets;
   
-    if(localStorage.getItem('jackets') == null) {
+    if (storedJackets === null) {
       jackets = [];
-    }else {
-      jackets = JSON.parse(localStorage.getItem('jackets'))
+    } else {
+      jackets = JSON.parse(storedJackets);
     }
   
     console.log(jackets);
@@ -97,7 +90,7 @@ let jackets = [
     let tableData = document.querySelector('#tableData');
   
     tableData.innerHTML = '';
-    jackets.forEach((item) => {
+    jackets.forEach((item, index) => {
       tableData.innerHTML += `
       <tr>
       <td><img src="${item.image}"></td>
@@ -112,35 +105,31 @@ let jackets = [
   document.onload = displayData();
   
   //add
-  
   function addItem() {
-  let image = document.querySelector('#image').value;
-  let name = document.querySelector('#name').value;
-  let price = document.querySelector('#price').value;
+    let image = document.querySelector('#image').value;
+    let name = document.querySelector('#name').value;
+    let price = document.querySelector('#price').value;
   
-  // console.log('reached');
-  let jackets
+    let jackets;
   
-  if(localStorage.getItem('jackets') == null) {
-    jackets = [];
-  }else {
-    jackets = JSON.parse(localStorage.getItem('jackets'))
-  }
+    if (localStorage.getItem('jackets') == null) {
+      jackets = [];
+    } else {
+      jackets = JSON.parse(localStorage.getItem('jackets'));
+    }
   
-  console.log(jackets);
+    jackets.push({
+      image: image, // Include the image value
+      name: name,
+      price: price,
+    });
   
-  jackets.push({
-    name: name,
-    price: price,
-    
-  })
+    localStorage.setItem('jackets', JSON.stringify(jackets));
+    displayData();
   
-  localStorage.setItem('jackets', JSON.stringify(jackets));
-  displayData();
-  
-  name = document.querySelector('#name').value = '';
-  price = document.querySelector('#price').value = '';
-  image = document.querySelector('#image').value = '';
+    name = document.querySelector('#name').value = '';
+    price = document.querySelector('#price').value = '';
+    image = document.querySelector('#image').value = '';
   }
   
   /*

@@ -81,12 +81,16 @@ JSON.parse(localStorage.getItem('jackets')) :
           <div class="card-body">
             <h5 class="card-title">${item.name}</h5>
             <p class="card-text">${item.price}</p>
-            <select class="iphone">
-              <option>select color</option>
-              <option value="color">black</option>
-              <option value="color">white</option>
-              <option value="color">Gold</option>
-              <option value="color">pink</option>
+            <select class="jacket">
+              <option>select size </option>
+              <option value="size">2-3yrs</option>
+              <option value="size">3-4yrs</option>
+              <option value="size">4-5yrs</option>
+              <option value="size">5-6yrs</option>
+              <option value="size">7-8yrs</option>
+              <option value="size">S</option>
+              <option value="size">M</option>
+              <option value="size">L</option>
             </select>
             <a href="./checkout.html" class="btn btn-primary">Add to cart</a>
           </div>
