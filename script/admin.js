@@ -31,7 +31,7 @@ let jackets = [
     },
     {
         id: '6',
-        image: '',
+        image: 'https://i.postimg.cc/FzqRpQ9M/teddy-jacket.jpg',
         name: '💓Teddy jacket',
         price: 'R250'
       },
@@ -67,7 +67,7 @@ let jackets = [
       },
     {
         id: '12',
-        image: '',
+        image: 'https://i.postimg.cc/FH3GXrJH/little-boys-Denin-jacket.jpg',
         name: '💙Denim jacket',
         price: 'R200'
       },
@@ -119,7 +119,7 @@ let jackets = [
     }
   
     jackets.push({
-      image: image, // Include the image value
+      image: image, 
       name: name,
       price: price,
     });
@@ -167,7 +167,7 @@ let jackets = [
       }
     });
   
-    localStorage.setItem('jackets', JSON.stringify(jackets)); // Update local storage
+    localStorage.setItem('jackets', JSON.stringify(jackets)); 
   
     displayData();
   }

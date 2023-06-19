@@ -8,64 +8,76 @@ JSON.parse(localStorage.getItem('jackets')) :
 
     {
       id: '1',
-      image: 'https://i.postimg.cc/DZg7PCkC/barbie-girls-barbie-fleece.jpg',
-      name: 'Babie girls fleece',
+      image: 'https://i.postimg.cc/cJPFQT69/barbie-girls-barbie-fleece-removebg-preview-2-4.png',
+      name: '💓Babie jacket',
       price: 'R250'
     },
     {
       id: '2',
-      image:'',
-      name: 'Denim jacket',
-      price: 'R200'
-    },
-    {
-      id: '3',
-      image: '../images/Kiddies-J (girls)/kids_micky_demin-removebg-preview.png',
-      name: 'Micky denim',
+      image: 'https://i.postimg.cc/QtdhL8jK/kids-Biker-Jacket-removebg-preview-8-edited.jpg',
+      name: '💓Biker jacket',
       price: 'R250'
     },
     {
+      id: '3',
+      image: 'https://i.postimg.cc/3N2LnGzX/kids-micky-demin-1.jpg',
+      name: '💓Mickey Denim',
+      price: 'R230'
+    },
+    {
       id: '4',
-      image: '../images/Kiddies-J (girls)/Puffer-Jacket-removebg-preview (1).png',
-      name: 'Puffer jacket',
+      image: 'https://i.postimg.cc/V6Gnqk7Y/Puffer-Jacket-3.jpg',
+      name: '💓Puffer jacket',
       price: 'R220'
     },
     {
       id: '5',
-      image: 'https://i.postimg.cc/NFNPJYcL/teddy-jacket-removebg-preview.png',
-      name: 'Teddy jacket',
+      image: 'https://i.postimg.cc/L4L72qsd/Black-denim.jpg',
+      name: '💓Black Denim',
       price: 'R250'
     },
     {
-      id: '6',
-      image: '',
-      name: '',
-      price: 'R250'
-    },
+        id: '6',
+        image: 'https://i.postimg.cc/FzqRpQ9M/teddy-jacket.jpg',
+        name: '💓Teddy jacket',
+        price: 'R250'
+      },
     {
-      id: '7',
-      image: 'https://i.postimg.cc/xTM04FZg/kids-Biker-Jacket-removebg-preview-8.png',
-      name: 'Denim jacket',
-      price: 'R200'
-    },
+        id: '7',
+        image: 'https://i.postimg.cc/brK5TCK6/Borg-collar-flap-Detail-coat.jpg',
+        name: '💙Borg Collar Flap Detail coat',
+        price: 'R350'
+      },
     {
-      id: '8',
-      image: '../images/Kiddies-J (girls)/kids_micky_demin-removebg-preview.png',
-      name: 'Micky denim',
-      price: 'R250'
-    },
+        id: '8',
+        image: 'https://i.postimg.cc/tTPnJDh3/Superman-quilted-jacket.jpg',
+        name: '💙Superman quilted jacket',
+        price: 'R250'
+      },
     {
-      id: '9',
-      image: '../images/Kiddies-J (girls)/Puffer-Jacket-removebg-preview (1).png',
-      name: 'Puffer jacket',
-      price: 'R220'
-    },
+        id: '9',
+        image: 'https://i.postimg.cc/Gm2BGbFh/Mickey-Mouse-Bomber.jpg',
+        name: '💙Mickey Mouse Bomber jacket',
+        price: 'R350'
+      },
     {
-      id: '10',
-      image: 'https://i.postimg.cc/NFNPJYcL/teddy-jacket-removebg-preview.png',
-      name: 'Teddy jacket',
-      price: 'R250'
-    }
+        id: '10',
+        image: 'https://i.postimg.cc/gj2wspCD/Bomber-jacket.jpg',
+        name: '💙Bomber Jacket',
+        price: 'R250'
+      },
+    {
+        id: '11',
+        image: 'https://i.postimg.cc/C5chxf6C/Axel-Arigato-Illusion-varsity-jacket.jpg',
+        name: '💙Allex Arigato Illuson Varsity Jacket',
+        price: 'R250'
+      },
+    {
+        id: '12',
+        image: 'https://i.postimg.cc/FH3GXrJH/little-boys-Denin-jacket.jpg',
+        name: '💙Denim jacket',
+        price: 'R200'
+      },
   ]
  ))
 
