@@ -104,7 +104,8 @@ JSON.parse(localStorage.getItem('jackets')) :
               <option value="size">M</option>
               <option value="size">L</option>
             </select>
-            <a href="./checkout.html" class="btn btn-primary">Add to cart</a>
+            <a href="./checkout.html?id=${item.id}" class="btn btn-primary">Add to cart</a>
+            </div>
           </div>
         </div>
       </div>
@@ -113,4 +114,3 @@ JSON.parse(localStorage.getItem('jackets')) :
 }catch(e) {
   location.reload()
 }
-

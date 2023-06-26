@@ -73,125 +73,25 @@ let jackets = [
       },
   ];
   
-  localStorage.setItem('jackets', JSON.stringify(jackets));
-  
-  function displayData() {
-    let storedJackets = localStorage.getItem('jackets');
-    let jackets;
-  
-    if (storedJackets === null) {
-      jackets = [];
-    } else {
-      jackets = JSON.parse(storedJackets);
-    }
-  
-    console.log(jackets);
-  
-    let tableData = document.querySelector('#tableData');
-  
-    tableData.innerHTML = '';
-    jackets.forEach((item, index) => {
-      tableData.innerHTML += `
-      <tr>
-      <td><img src="${item.image}"></td>
-      <td>${item.name}</td>
-      <td>${item.price}</td>
-      <td><button>delete</button><button>Edit</button></td>
-      </tr>
-      `
-    })
+localStorage.setItem('jackets', JSON.stringify(jackets));
+
+function displayData() {
+  let storedJackets = localStorage.getItem('jackets');
+  let jackets;
+
+  if (storedJackets === null) {
+    jackets = [];
+  } else {
+    jackets = JSON.parse(storedJackets);
   }
-  
-  document.onload = displayData();
-  
-  //add
-  function addItem() {
-    let image = document.querySelector('#image').value;
-    let name = document.querySelector('#name').value;
-    let price = document.querySelector('#price').value;
-  
-    let jackets;
-  
-    if (localStorage.getItem('jackets') == null) {
-      jackets = [];
-    } else {
-      jackets = JSON.parse(localStorage.getItem('jackets'));
-    }
-  
-    jackets.push({
-      image: image, 
-      name: name,
-      price: price,
-    });
-  
-    localStorage.setItem('jackets', JSON.stringify(jackets));
-    displayData();
-  
-    name = document.querySelector('#name').value = '';
-    price = document.querySelector('#price').value = '';
-    image = document.querySelector('#image').value = '';
-  }
-  
-  /*
-  
-  function sortItem() {
-    let name = document.querySelector('#name').value = '';
-    price = document.querySelector('#price').value = '';
-    image = document.querySelector('#image').value = '';
-  }
-  
-  
-  if(localStorage.getItem('jacket')== null) {
-    jacket =[]
-  }else {
-    jacket = JSON.parse(localStorage.getItem('jacket'))
-  }
-  
-  */
-  
-  //sort
-  
-  
-  function sortItem() {
-    const name = document.querySelector('#name').value = '';
-    const price = document.querySelector('#price').value = '';
-    const image = document.querySelector('#image').value = '';
-  
-    jackets.sort((a, b) => {
-      if (a.name < b.name) {
-        return -1;
-      } else if (a.name > b.name) {
-        return 1;
-      } else {
-        return 0;
-      }
-    });
-  
-    localStorage.setItem('jackets', JSON.stringify(jackets)); 
-  
-    displayData();
-  }
-  
-  
-  //edit 
-  
-  
-  function displayData() {
-    let jackets;
-  
-    if (localStorage.getItem('jackets') == null) {
-      jackets = [];
-    } else {
-      jackets = JSON.parse(localStorage.getItem('jackets'));
-    }
-  
-    console.log(jackets);
-  
-    let tableData = document.querySelector('#tableData');
-  
-    tableData.innerHTML = '';
-    jackets.forEach((item, index) => {
-      tableData.innerHTML += `
+
+  console.log(jackets);
+
+  let tableData = document.querySelector('#tableData');
+
+  tableData.innerHTML = '';
+  jackets.forEach((item, index) => {
+    tableData.innerHTML += `
       <tr>
         <td><img src="${item.image}"></td>
         <td>${item.name}</td>
@@ -201,40 +101,92 @@ let jackets = [
           <button class="edit-button" onclick="editItem(${index})">Edit</button>
         </td>
       </tr>
-      `;
-    });
+    `;
+  });
+}
+
+function addItem() {
+  let image = document.querySelector('#image').value;
+  let name = document.querySelector('#name').value;
+  let price = document.querySelector('#price').value;
+
+  let jackets;
+
+  if (localStorage.getItem('jackets') == null) {
+    jackets = [];
+  } else {
+    jackets = JSON.parse(localStorage.getItem('jackets'));
   }
-  
-  function editItem(index) {
-    const jacket = jackets[index];
-  
-    const nameInput = prompt('Enter the new name:', jacket.name);
-    const priceInput = prompt('Enter the new price:', jacket.price);
-    const imageInput = prompt('Enter the new image URL:', jacket.image);
-  
-    // Update the jacket object in the array if inputs are not empty
-    if (nameInput !== null && nameInput !== '') {
-      jacket.name = nameInput;
-    }
-    if (priceInput !== null && priceInput !== '') {
-      jacket.price = priceInput;
-    }
-    if (imageInput !== null && imageInput !== '') {
-      jacket.image = imageInput;
-    }
-  
-    localStorage.setItem('jackets', JSON.stringify(jackets));
-    displayData();
+
+  jackets.push({
+    image: image,
+    name: name,
+    price: price,
+  });
+
+  localStorage.setItem('jackets', JSON.stringify(jackets));
+  displayData();
+
+  document.querySelector('#name').value = '';
+  document.querySelector('#price').value = '';
+  document.querySelector('#image').value = '';
+}
+
+function sortItem() {
+  let jackets;
+
+  if (localStorage.getItem('jackets') == null) {
+    jackets = [];
+  } else {
+    jackets = JSON.parse(localStorage.getItem('jackets'));
   }
-  
-  
-  //delete
-  
-  
-  function deleteItem(index) {
-    jackets.splice(index, 1);
-    localStorage.setItem('jackets', JSON.stringify(jackets));
-    displayData();
+
+  jackets.sort((a, b) => {
+    if (a.name < b.name) {
+      return -1;
+    } else if (a.name > b.name) {
+      return 1;
+    } else {
+      return 0;
+    }
+  });
+
+  localStorage.setItem('jackets', JSON.stringify(jackets));
+  displayData();
+}
+
+function editItem(index) {
+  const jackets = JSON.parse(localStorage.getItem('jackets'));
+  const jacket = jackets[index];
+
+  const nameInput = prompt('Enter the new name:', jacket.name);
+  const priceInput = prompt('Enter the new price:', jacket.price);
+  const imageInput = prompt('Enter the new image URL:', jacket.image);
+
+  if (nameInput !== null && nameInput !== '') {
+    jacket.name = nameInput;
   }
-  
-    
+  if (priceInput !== null && priceInput !== '') {
+    jacket.price = priceInput;
+  }
+  if (imageInput !== null && imageInput !== '') {
+    jacket.image = imageInput;
+  }
+
+  localStorage.setItem('jackets', JSON.stringify(jackets));
+  displayData();
+}
+
+function deleteItem(index) {
+  const jackets = JSON.parse(localStorage.getItem('jackets'));
+  jackets.splice(index, 1);
+  localStorage.setItem('jackets', JSON.stringify(jackets));
+  displayData();
+}
+
+document.addEventListener('DOMContentLoaded', displayData);
+
+
+
+
+
